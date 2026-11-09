@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+box-sizing:border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f9;
+    color:#222;
+}
+header{
+    background-color: #123c35;
+    color:white;
+    text-align: center;
+    padding:30px;
+}
+header h1{
+    font-size: 30px;
+}
+header p{
+    margin-top: 10px;
+}
+main h2{
+    margin-bottom: 25px;
+}
+.budget, .expense, .balance{
+    background-color: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow:0 3px 10px #00000015;
+}
+    .budget h2 {
+color: #219653;
+margin-top: 15px;
+    }
+    .balance h2 {
+        color: #2874a6;
+        margin-top: 15px;
+    }
+    .chart-container {
+        background-color: white;
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px #00000015;
+    }
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .budget, .expense, .balance, .chart-container {
+        width: 100%;
+        padding: 18px;
+    }
+
+    input, select, button {
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px;
+    }
+}

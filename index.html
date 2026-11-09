@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMART BUDGET AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>SMART BUDGET</h1>
+    <p> MANAGE YOUR  MONTHLY SALARY</p>
+</header>
+<main>
+    <h2>MONTHLY BUDGET</h2>
+    <div class="budget">
+        <h3>TOTAL BUDGET</h3>
+        <h2 id="totalBudget">10,000</h2>
+        <input type="number" id="budgetAmount" placeholder="Entry Monthly Budget">
+        <button onclick="setBudget()">SET BUDGET</button>
+    </div>
+    <div class="expense">
+        <h3>TOTAL EXPENSE</h3>
+        <h2 id="totalExpense">₹0</h2>
+    </div>
+    <div class="balance">
+        <h3>remaining balance</h3>
+        <h2 id="remainingBalance">₹10,000</h2>
+    </div>
+    <h2>ADD YOUR EXPENSE</h2>
+    <div class="expense-form">
+        <input type="text" id="expenseName"
+        placeholder="Expense Name">
+        <input type="number" id="expenseAmount"
+        placeholder="enter Amount">
+        <select id="expenseCategory">
+    <option value="">select Category</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Education">Education</option>
+        <option value="Other">Other</option>
+</select>
+        <button onclick="addExpense()">
+            ADD EXPENSE
+        </button>
+</div>
+<h2>EXPENSE HISTORY</h2>
+<ul id="expenseList"></ul>
+<h2>AI SAVING SUGGESTIONS</h2>
+
+<div class="suggestions">
+    <p id="aiSuggestion">Add your expenses to get saving suggestions!</p>
+    <button onclick="getSuggestion()">GET SUGGESTIONS</button>
+</div>
+<h2>Expense History</h2>
+<div class="chart-container">
+    <canvas id="expenseChart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</main>
+</body>
+</html>
