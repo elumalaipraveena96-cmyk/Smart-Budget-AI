@@ -145,3 +145,26 @@ function getSuggestion() {
 
     document.getElementById("aiSuggestion").innerText = suggestion;
 }
+function analyzeExpenses() {
+    if (totalExpense === 0) {
+        document.getElementById("aiResult").innerText =
+            "Please add expenses first!";
+        return;
+    }
+
+    let remaining = totalBudget - totalExpense;
+
+    let message = "";
+
+    if (remaining < 0) {
+        message = "Warning! You have exceeded your budget.";
+    } 
+    else if (totalExpense > totalBudget * 0.75) {
+        message = "You have spent more than 75% of your budget. Reduce unnecessary expenses.";
+    } 
+    else {
+        message = "Good! Your spending is within budget. Keep saving!";
+    }
+
+    document.getElementById("aiResult").innerText = message;
+}
